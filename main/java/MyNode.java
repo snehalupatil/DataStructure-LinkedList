@@ -1,8 +1,17 @@
+/*
+ * created a sub class of Interface Inode.
+ */
+
 public class MyNode<k> implements INode<k>{
 
     private k key;
     private INode next;
 
+
+    /*
+     * Consider kay as a parameter in the constructor
+     * it initiates the value and next value should be 0
+     */
     public MyNode(k key){
         this.key = key;
         this.next = null;
@@ -22,6 +31,9 @@ public class MyNode<k> implements INode<k>{
         return next;
     }
 
+    /**
+     * it will set the next key value.
+    */
     public void setNext(INode next) {
         this.next = next;
     }
