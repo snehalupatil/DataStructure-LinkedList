@@ -63,7 +63,7 @@ public class MyLinkedListTest {
         myLinkdList.append(mySecondNode);
         myLinkdList.append(myThirdNode);
         myLinkdList.printMyNodes();
-        myLinkdList.pop(myFirstNode);
+        myLinkdList.popFirst(myFirstNode);
         myLinkdList.printMyNodes();
 
         boolean result = myLinkdList.head.equals(mySecondNode) &&
@@ -73,7 +73,7 @@ public class MyLinkedListTest {
     }
 
     @Test
-    public void given3NumbersWhenToLinkedListShouldDeleteLastNode() {
+    public void given3Numbers_WhenToLinkedList_ShouldDeleteLastNode() {
         MyNode<Integer> myFirstNode = new MyNode<>(56);
         MyNode<Integer> mySecondNode = new MyNode<>(30);
         MyNode<Integer> myThirdNode = new MyNode<>(70);
@@ -88,6 +88,21 @@ public class MyLinkedListTest {
         boolean result = myLinkdList.head.equals(myFirstNode) &&
                          myLinkdList.head.getNext().equals(mySecondNode) &&
                          myLinkdList.tail.equals(mySecondNode);
+        Assertions.assertTrue(result);
+    }
+
+    @Test
+    public void given3NumbersWhenToLinkedListShouldSearchNumber() {
+        MyNode<Integer> myFirstNode = new MyNode<>(56);
+        MyNode<Integer> mySecondNode = new MyNode<>(30);
+        MyNode<Integer> myThirdNode = new MyNode<>(70);
+        MyLinkdList myLinkdList = new MyLinkdList();
+        myLinkdList.append(myFirstNode);
+        myLinkdList.append(mySecondNode);
+        myLinkdList.append(myThirdNode);
+        INode foundNode = myLinkdList.searchNode(mySecondNode);
+
+        boolean result = foundNode.equals(mySecondNode);
         Assertions.assertTrue(result);
     }
 }

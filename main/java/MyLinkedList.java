@@ -49,7 +49,7 @@ public class MyLinkdList {
         newNode.setNext(tempNode);
     }
 
-    public void pop(INode myNode) {
+    public void popFirst(INode myNode) {
         INode tempNode = myNode;
         this.head = tempNode.getNext();
     }
@@ -62,6 +62,20 @@ public class MyLinkdList {
         }
         this.tail = tempNode.getNext();
         tempNode.getNext().setNext(null);
+        return tempNode;
+    }
+
+    public INode searchNode(INode myNode) {
+        INode tempNode = this.head;
+        while(tempNode !=null && tempNode.getNext() != null){
+            if(tempNode.getKey().equals(myNode.getKey())){
+                System.out.println("The Found value: "+tempNode.getKey());
+                break;
+            }
+            else
+                tempNode = tempNode.getNext();
+        }
+
         return tempNode;
     }
 }
