@@ -1,7 +1,6 @@
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-
 public class MyNodeTest {
     @Test
     public void given3NumbersWhenLinkedShouldPassedLinkedListTest(){
@@ -13,7 +12,7 @@ public class MyNodeTest {
         mySecondNode.setNext(myThirdNode);
 
         boolean result = myFirstNode.getNext().equals(mySecondNode) &&
-                         mySecondNode.getNext().equals(myThirdNode);
+                mySecondNode.getNext().equals(myThirdNode);
         Assertions.assertTrue(result);
     }
 
