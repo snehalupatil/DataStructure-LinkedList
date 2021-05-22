@@ -49,4 +49,10 @@ public class MyLinkdList {
         newNode.setNext(tempNode);
     }
 
+    public void pop(INode myNode) {
+        INode tempNode = myNode;
+        this.head = tempNode.getNext();
+    }
+
+
 }
