@@ -2,7 +2,8 @@ public class MyNode<k> implements INode<k>{
     private k key;
     private INode next;
 
-    public MyNode(k key){
+    public MyNode(k key)
+    {
         this.key = key;
         this.next = null;
     }

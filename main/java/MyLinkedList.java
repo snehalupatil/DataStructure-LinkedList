@@ -1,4 +1,5 @@
-public class MyLinkdList {
+public class MyLinkdList
+{
 
     public INode head;
     public INode tail;
